@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentorship Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <button class="nav-btn" data-tab="log">Log Session</button>
+    <button class="nav-btn" data-tab="goal">Set Goal</button>
+    <button class="nav-btn" data-tab="feedback">Feedback</button>
+    <button class="nav-btn" data-tab="progress">Progress</button>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Log Session -->
+    <section id="log" class="tab active">
+      <h2>Log a Mentorship Session</h2>
+      <form id="sessionForm">
+        <input type="date" id="sessionDate" required />
+        <input type="text" id="sessionTopic" placeholder="Session Topic" required />
+        <input type="text" id="sessionMentor" placeholder="Mentor Name" required />
+        <input type="text" id="sessionMentee" placeholder="Mentee Name" required />
+        <button type="submit">Log Session</button>
+      </form>
+    </section>
+
+    <!-- Set Goal -->
+    <section id="goal" class="tab">
+      <h2>Set a Goal</h2>
+      <form id="goalForm">
+        <input type="text" id="goalDescription" placeholder="Goal Description" required />
+        <input type="date" id="goalTargetDate" required />
+        <button type="submit">Set Goal</button>
+      </form>
+    </section>
+
+    <!-- Feedback -->
+    <section id="feedback" class="tab">
+      <h2>Session Feedback</h2>
+      <form id="feedbackForm">
+        <select id="feedbackSession"></select>
+        <textarea id="feedback" rows="4" placeholder="Write your feedback..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+    <!-- Progress -->
+    <section id="progress" class="tab">
+      <h2>Goals</h2>
+      <ul id="goalList"></ul>
+      <h2>Sessions</h2>
+      <ul id="sessionList"></ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
